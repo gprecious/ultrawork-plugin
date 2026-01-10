@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ultrawork",
+  "version": "1.0.0",
+  "description": "Sisyphus/Ultrawork 패턴 기반 병렬 에이전트 오케스트레이션. oh-my-opencode 영감.",
+  "keywords": [
+    "orchestration",
+    "parallel-agents",
+    "sisyphus",
+    "ultrawork",
+    "productivity"
+  ],
+  "author": {
+    "name": "QPLACE",
+    "url": "https://github.com/qplace-company"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qplace-company/ultrawork-plugin"
+  },
+  "license": "MIT",
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
+}
