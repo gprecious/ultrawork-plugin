@@ -5,5 +5,17 @@
   "author": {
     "name": "gprecious",
     "email": "gprecious@users.noreply.github.com"
+  },
+  "dependencies": {
+    "required": [
+      "code-simplifier@claude-plugins-official",
+      "code-reviewer@claude-plugins-official"
+    ],
+    "recommended": [
+      "context7@claude-plugins-official",
+      "playwright@claude-plugins-official",
+      "greptile@claude-plugins-official",
+      "figma@claude-plugins-official"
+    ]
   }
 }

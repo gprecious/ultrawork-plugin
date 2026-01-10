@@ -9,6 +9,35 @@ oh-my-opencode의 Sisyphus/Ultrawork 패턴을 Claude Code에 구현한 플러�
 - **Oracle 아키텍처 자문**: 복잡한 결정에 opus 모델 적극 활용
 - **Todo 완료 강제**: 모든 작업 완료 전까지 중도 포기 방지
 
+## 의존성
+
+이 플러그인을 사용하려면 다음 플러그인들이 필요합니다.
+
+### 필수 플러그인 (Required)
+
+검증 단계에서 사용되므로 반드시 활성화해야 합니다:
+
+| 플러그인 | 마켓플레이스 | 용도 |
+|---------|-------------|------|
+| `code-simplifier` | claude-plugins-official | 코드 단순화 검증 |
+| `code-reviewer` | claude-plugins-official | 버그/보안 코드 리뷰 |
+
+```bash
+claude plugin install code-simplifier
+claude plugin install code-reviewer
+```
+
+### 권장 플러그인 (Recommended)
+
+전체 기능을 활용하려면 다음 플러그인도 활성화를 권장합니다:
+
+| 플러그인 | 마켓플레이스 | 용도 |
+|---------|-------------|------|
+| `context7` | claude-plugins-official | 공식 라이브러리 문서 검색 (librarian 에이전트) |
+| `playwright` | claude-plugins-official | 웹 자동화 테스트 |
+| `greptile` | claude-plugins-official | PR 분석 및 코드 리뷰 |
+| `figma` | claude-plugins-official | UI/UX 디자인 작업 |
+
 ## 설치
 
 ### Claude Code Plugin Marketplace
