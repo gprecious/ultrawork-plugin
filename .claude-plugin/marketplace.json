@@ -14,7 +14,7 @@
         "name": "gprecious",
         "email": "gprecious@users.noreply.github.com"
       },
-      "source": ".",
+      "source": "./plugins/ultrawork",
       "category": "productivity",
       "homepage": "https://github.com/gprecious/ultrawork-plugin"
     }
