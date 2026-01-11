@@ -30,7 +30,7 @@ oh-my-opencode의 Ultrawork 패턴을 Claude Code에 구현한 모드.
 2. **요청 분석** → Oracle 자문 → Todo 생성
 3. **Explore + Librarian + Multimodal-looker 백그라운드 병렬 실행**
 4. 결과 수집 후 구현 작업 진행
-5. **code-simplifier → code-reviewer 순차 검증**
+5. **code-simplifier:code-simplifier → feature-dev:code-reviewer 순차 검증**
 6. **모든 Todo 완료까지 반복** (중도 포기 금지)
 
 ## 워크플로우
@@ -51,8 +51,8 @@ oh-my-opencode의 Ultrawork 패턴을 Claude Code에 구현한 모드.
    └── Task(frontend-ui-ux-engineer): UI 작업
 
 5. 검증 (순차)
-   ├── Task(code-simplifier)
-   └── Task(code-reviewer)
+   ├── Task(code-simplifier:code-simplifier)
+   └── Task(feature-dev:code-reviewer)
 
 6. 완료 확인
    └── 모든 Todo 완료 시까지 반복
@@ -81,8 +81,8 @@ oh-my-opencode의 Ultrawork 패턴을 Claude Code에 구현한 모드.
 | 아키텍처 자문 | oracle | 동기 (적극) |
 | UI/UX 구현 | frontend-ui-ux-engineer | 동기 |
 | 기술 문서 | document-writer | 동기 |
-| 코드 단순화 | code-simplifier | 동기 |
-| 코드 리뷰 | code-reviewer | 동기 |
+| 코드 단순화 | code-simplifier:code-simplifier | 동기 |
+| 코드 리뷰 | feature-dev:code-reviewer | 동기 |
 
 ## 핵심 원칙
 

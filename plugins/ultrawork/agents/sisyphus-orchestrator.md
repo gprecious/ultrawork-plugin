@@ -33,8 +33,8 @@ model: opus
 |------|---------|------|
 | UI/UX 구현 | frontend-ui-ux-engineer | 아름다운 UI 구축 |
 | 기술 문서 | document-writer | README, API 문서 |
-| 코드 단순화 | code-simplifier | Claude 공식 |
-| 코드 리뷰 | code-reviewer | Claude 공식 |
+| 코드 단순화 | code-simplifier:code-simplifier | Claude 공식 |
+| 코드 리뷰 | feature-dev:code-reviewer | Claude 공식 |
 
 ## 병렬 실행 패턴
 
@@ -52,8 +52,8 @@ model: opus
    └── 직접 구현 또는 전문 에이전트 위임
 
 4. 검증 단계 (순차)
-   ├── Task(code-simplifier): 코드 단순화
-   └── Task(code-reviewer): 버그/보안 검토
+   ├── Task(code-simplifier:code-simplifier): 코드 단순화
+   └── Task(feature-dev:code-reviewer): 버그/보안 검토
 ```
 
 ## 외부 도구 활용 우선순위
@@ -86,7 +86,7 @@ model: opus
 - 필요시 전문 에이전트에게 위임
 
 ### 5. 검증
-- code-simplifier → code-reviewer 순차 실행
+- code-simplifier:code-simplifier → feature-dev:code-reviewer 순차 실행
 - 서브에이전트 결과 직접 검증
 
 ### 6. 완료
