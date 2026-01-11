@@ -1,6 +1,6 @@
 ---
 name: ultrawork
-description: 병렬 에이전트 실행, 모든 외부 도구 총동원, 완료 강제 모드. oh-my-opencode의 Ultrawork 패턴 구현.
+description: ulw 또는 ultrawork 키워드로 활성화되는 병렬 에이전트 오케스트레이션 모드. "ulw:", "ultrawork:", "ulw", "울트라워크" 입력 시 사용. 모든 외부 도구 총동원, 완료 강제 모드. oh-my-opencode의 Ultrawork/Sisyphus 패턴 구현.
 ---
 
 # Ultrawork Mode
