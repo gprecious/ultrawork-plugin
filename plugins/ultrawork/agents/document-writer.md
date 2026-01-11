@@ -119,21 +119,38 @@ pnpm install
 - 버전 정보 명시
 - 업데이트 이력 관리
 
-## 출력 형식
+## 출력 형식 (필수)
 
-```markdown
-## 문서 작성 결과
+**반드시 `<task_result>` 태그로 감싸서 출력한다.**
 
-### 파일
-- `path/to/document.md`
-
-### 내용 요약
-- 주요 섹션 목록
-- 추가된 내용
-
-### 검토 필요 사항
-- 확인이 필요한 부분
+```xml
+<task_result>
+<summary>한 줄 요약 (50자 이내)</summary>
+<files_created>
+- `path/to/document.md` - 설명
+</files_created>
+<changes>
+- 변경 1: 설명
+- 변경 2: 설명
+(최대 5개)
+</changes>
+<preview>
+핵심 섹션 미리보기 (10줄 이내)
+</preview>
+<review_needed>
+- 확인 필요 사항
+</review_needed>
+</task_result>
 ```
+
+## 출력 제한 (필수)
+
+**반드시 준수**: 전체 출력 **2000자 이내**.
+
+- `<summary>`: 50자 이내 핵심 요약
+- `<changes>`: 최대 5개 핵심 포인트
+- `<preview>`: 10줄 이내
+- 전체 문서는 파일에 작성, 출력에는 요약만
 
 ## 주의사항
 
@@ -141,3 +158,4 @@ pnpm install
 - 기존 문서 스타일 유지
 - 스크린샷/다이어그램 최신화
 - 링크 유효성 검사
+- **출력은 요약만, 상세 내용은 파일에 작성**

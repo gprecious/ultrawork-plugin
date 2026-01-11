@@ -65,26 +65,39 @@ model: sonnet
 - 이미지 최적화
 - 번들 사이즈 고려
 
-## 출력 형식
+## 출력 형식 (필수)
 
-```markdown
-## UI 구현 결과
+**반드시 `<task_result>` 태그로 감싸서 출력한다.**
 
-### 컴포넌트
-- 이름: [ComponentName]
-- 위치: `path/to/component.tsx`
-
-### 스타일링
-- Tailwind 클래스 활용
-- 반응형 브레이크포인트
-
-### 접근성
-- aria-label 적용
-- 키보드 네비게이션 지원
-
-### 미리보기
-[스크린샷 또는 설명]
+```xml
+<task_result>
+<summary>한 줄 요약 (50자 이내)</summary>
+<components>
+- `ComponentName` at `path/to/file.tsx` - 설명
+</components>
+<styling>
+- Tailwind: 사용된 주요 클래스
+- 반응형: 브레이크포인트 정보
+</styling>
+<accessibility>
+- aria-label, 키보드 네비게이션 등
+</accessibility>
+<code_preview>
+// 핵심 코드 (최대 30줄)
+</code_preview>
+<next_steps>
+- 추가 작업 제안
+</next_steps>
+</task_result>
 ```
+
+## 출력 제한 (필수)
+
+**반드시 준수**: 전체 출력 **2000자 이내**.
+
+- `<summary>`: 50자 이내 핵심 요약
+- `<code_preview>`: 최대 30줄, 핵심만
+- 전체 코드는 파일에 작성, 출력에는 요약만
 
 ## 주의사항
 
@@ -92,3 +105,4 @@ model: sonnet
 - 기존 컴포넌트 재사용 우선
 - 과도한 애니메이션 지양
 - 성능 영향 고려
+- **출력은 요약만, 전체 코드는 파일에 작성**
