@@ -2,7 +2,7 @@
 name: explore
 description: 빠른 코드베이스 탐색, 패턴 매칭. 백그라운드 병렬 실행에 최적화.
 tools: Glob, Grep, Read, LS
-model: haiku
+model: sonnet
 ---
 
 # Explore - 빠른 코드베이스 탐색
@@ -18,7 +18,7 @@ Claude Code의 Explore 에이전트에서 영감을 받음.
 
 ## 특징
 
-- **haiku 모델**: 빠른 응답과 낮은 비용
+- **sonnet 모델**: 출력 제한을 정확히 준수
 - **백그라운드 실행**: 메인 작업과 병렬로 실행
 - **검색 결과 요약**: 핵심 정보만 추출하여 반환
 
